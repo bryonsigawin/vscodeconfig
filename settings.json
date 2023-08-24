@@ -1,0 +1,62 @@
+{
+  "workbench.colorTheme": "Kanagawa Dragon",
+  "workbench.activityBar.visible": false,
+  "breadcrumbs.enabled": false,
+  "window.restoreWindows": "none",
+  "workbench.startupEditor": "none",
+
+  "editor.lineNumbers": "relative",
+
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.highlightedyank.enable": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // buffer navigation
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.explorer.fileView.focus"]
+    },
+
+    // saving / closing stuff
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+
+    // code actions / formatting
+    {
+      "before": ["leader", "c", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    { 
+      "before": ["leader", "c", "a"],
+      "commands": ["editor.action.quickFix"],
+    },
+    { 
+      "before": ["leader", "c", "r"],
+      "commands": ["editor.action.rename"],
+    },
+    { 
+      "before": ["leader", "g", "d"],
+      "commands": ["editor.action.revealDefinition"],
+    },
+    { 
+      "before": ["leader", "e", "e"],
+      "commands": ["editor.action.expandAbbreviation"],
+    },
+    { 
+      "before": ["leader", "e", "w"],
+      "commands": ["editor.action.wrapWithAbbreviation"],
+    }
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true
+}
